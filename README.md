@@ -136,3 +136,5 @@ docker run -d --rm --name cassandra cassandra
 ```commandline
 docker run -d -e CASSANDRA_HOST_IP=$(docker inspect --format '{{.NetworkSettings.IPAddress}}' cassandra) -e CASSANDRA_PORT=9042 -p 3000:3000 --name cassandra-web delermando/docker-cassandra-web:v0.4.0
 ```
+
+### [Ref](https://medium.com/@saurabhg.engineer/how-to-run-cassandra-including-web-interface-locally-in-two-simple-steps-6c9449defb97)
