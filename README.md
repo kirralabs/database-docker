@@ -122,3 +122,17 @@ redis-commander -p 32768
 - run redis server
 - run client app
 - access on webbrowser
+
+
+
+## Cassandra
+### Server :
+- run server
+```commandline
+docker run -d --rm --name cassandra cassandra
+```
+
+### Client :
+```commandline
+docker run -d -e CASSANDRA_HOST_IP=$(docker inspect --format '{{.NetworkSettings.IPAddress}}' cassandra) -e CASSANDRA_PORT=9042 -p 3000:3000 --name cassandra-web delermando/docker-cassandra-web:v0.4.0
+```
